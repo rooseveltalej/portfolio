@@ -4,6 +4,7 @@ import Home from '../components/Home';
 import About from '../components/About';
 import Contact from '../components/Contact';
 import Projects from '../components/Projects';
+import CoursesPage from '../components/CoursePage';
 // import Footer from '../components/Footer'; hace falta modificar el footer
 import './css/App.css';
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} /> 
         <Route path="/projects" element={<Projects />} />
+        <Route path="/courses" element={<CoursesPage />} />
         <Route path="*" element={<h1>Not Found</h1>} />
       </Routes>
       
