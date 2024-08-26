@@ -3,7 +3,7 @@ export const coursesBySemester = [
     semester: "First Semester",
     courses: [
       { name: "Introduction to Programming", status: "completed" },
-      { name: "Programming Workshop", status: "completed" },
+      { name: "Applied Programming", status: "completed" },
       { name: "Fundamentals of Computer Organization", status: "completed" },
       { name: "Discrete Mathematics", status: "completed" },
       { name: "General Mathematics", status: "completed" },
