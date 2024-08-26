@@ -1,13 +1,25 @@
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card, Image } from 'react-bootstrap';
 
 const About = () => {
   return (
     <Container className="py-5">
       <Row className="justify-content-center text-center">
         <Col md={8}>
+        <Image 
+          src="src/assets/profilePicture.png" 
+          alt="Roosevelt Alejandro" 
+          roundedCircle 
+          className="mb-4" 
+          fluid 
+          style={{ maxWidth: '150px', height: 'auto' }}
+        />
           <h1 className="display-4 mb-4">About Me</h1>
           <p className="lead">
-            Hi! I’m Roosevelt Alejandro, a passionate software developer from Costa Rica, specifically from the canton of San Carlos. 
+            Hi! I’m Roosevelt Alejandro, a passionate software developer from Costa Rica.
+          </p>
+
+          <p className="lead">
+
             My journey into computing began a bit unconventionally. Initially, I enrolled in Business Administration at university. 
             Although I enjoyed it, something deep inside me urged me to pursue something related to computers. 
             I followed that instinct and switched to studying Computer Engineering at the Instituto Tecnológico de Costa Rica.
@@ -20,8 +32,8 @@ const About = () => {
           </p>
           <p className="lead">
             Through these platforms, I have broadened my technological toolkit, mastering programming languages such as Java, 
-            Python, JavaScript, and TypeScript, as well as full-stack web development technologies, including Node.js for server-side 
-            applications and HTML and CSS for client-side structure and design. This hybrid approach to learning has allowed me to apply 
+            Python and JavaScript, as well as full-stack web development technologies, including Node.js for server-side 
+            applications and HTML, CSS and React for client-side structure and design. This hybrid approach to learning has allowed me to apply 
             theoretical knowledge to practical projects, enhancing my technical skills and understanding.
           </p>
         </Col>
@@ -42,7 +54,7 @@ const About = () => {
             <Card.Body>
               <Card.Title>Skills</Card.Title>
               <Card.Text>
-                Proficient in Java, Python, JavaScript, TypeScript, Node.js, HTML, and CSS. Adept at both frontend and backend development.
+                Proficient in Java, Python, JavaScript, React.js, Node.js, MySQL, Linux and Git. 
               </Card.Text>
             </Card.Body>
           </Card>

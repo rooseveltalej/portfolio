@@ -8,8 +8,14 @@ const Home = () => {
           <Col md={8}>
             <h1 className="display-4">Hello, I'm Roosevelt Alejandro</h1>
             <p className="lead">Software Developer | Computer Science Student</p>
-            <Button href="#projects" variant="primary" size="lg">
-              View My Projects
+            <Button 
+              href="/Roosevelt_Alejandro_CV.pdf" 
+              variant="primary" 
+              size="lg" 
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View My CV
             </Button>
           </Col>
         </Row>
