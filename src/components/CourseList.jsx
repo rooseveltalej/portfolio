@@ -1,38 +1,47 @@
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Grid, Card, CardContent, Typography } from '@mui/material';
+import { green, yellow, grey } from '@mui/material/colors';
 import { coursesBySemester } from '../data/courses';  // Importa los cursos por semestres
 
 const CourseList = () => {
-  const getVariant = (status) => {
+  const getBgColor = (status) => {
     switch (status) {
       case "completed":
-        return "success"; // Verde para completados
+        return green[500]; // Verde para completados
       case "in-progress":
-        return "warning"; // Amarillo para en curso
+        return yellow[700]; // Amarillo para en curso
       case "pending":
-        return "secondary"; // Gris para pendientes
+        return grey[500]; // Gris para pendientes
       default:
-        return "light";
+        return grey[200]; // Fondo claro para casos por defecto
     }
   };
 
   return (
-    <Container className="my-5">
-      <h2 className="text-center mb-4">University Courses</h2>
+    <Container sx={{ my: 5 }}>
+      <Typography variant="h4" align="center" gutterBottom>
+        University Courses
+      </Typography>
       {coursesBySemester.map((semesterData, index) => (
-        <div key={index} className="mb-5">
-          <h3 className="mb-4">{semesterData.semester}</h3>
-          <Row>
+        <div key={index} style={{ marginBottom: '2rem' }}>
+          <Typography variant="h5" gutterBottom>
+            {semesterData.semester}
+          </Typography>
+          <Grid container spacing={4}>
             {semesterData.courses.map((course, idx) => (
-              <Col md={6} lg={4} key={idx} className="mb-4">
-                <Card bg={getVariant(course.status)} text="white">
-                  <Card.Body>
-                    <Card.Title>{course.name}</Card.Title>
-                    <Card.Text>Status: {course.status.charAt(0).toUpperCase() + course.status.slice(1)}</Card.Text>
-                  </Card.Body>
+              <Grid item xs={12} sm={6} md={4} key={idx}>
+                <Card sx={{ bgcolor: getBgColor(course.status), color: 'white' }}>
+                  <CardContent>
+                    <Typography variant="h6">
+                      {course.name}
+                    </Typography>
+                    <Typography>
+                      Status: {course.status.charAt(0).toUpperCase() + course.status.slice(1)}
+                    </Typography>
+                  </CardContent>
                 </Card>
-              </Col>
+              </Grid>
             ))}
-          </Row>
+          </Grid>
         </div>
       ))}
     </Container>

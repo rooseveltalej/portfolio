@@ -1,4 +1,4 @@
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Grid, Card, CardContent, CardActions, Button, Typography } from '@mui/material';
 
 const projects = [
   {
@@ -21,25 +21,31 @@ const projects = [
 
 const Projects = () => {
   return (
-    <Container className="py-5">
-      <h1 className="display-4 text-center mb-5">My Projects</h1>
-      <Row>
+    <Container sx={{ py: 5 }}>
+      <Typography variant="h3" component="h1" gutterBottom textAlign="center" mb={5}>
+        My Projects
+      </Typography>
+      <Grid container spacing={4}>
         {projects.map((project, index) => (
-          <Col key={index} md={4} className="mb-4">
-            <Card className="h-100">
-              <Card.Body>
-                <Card.Title>{project.title}</Card.Title>
-                <Card.Text>{project.description}</Card.Text>
-              </Card.Body>
-              <Card.Footer className="text-center">
-                <Button href={project.link} target="_blank" variant="primary">
+          <Grid item key={index} xs={12} sm={6} md={4}>
+            <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column', border: '1px solid #ddd' }}>
+              <CardContent sx={{ flexGrow: 1 }}>
+                <Typography variant="h6" component="h2" gutterBottom>
+                  {project.title}
+                </Typography>
+                <Typography variant="body2">
+                  {project.description}
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button href={project.link} target="_blank" variant="contained" color="primary">
                   View Project
                 </Button>
-              </Card.Footer>
+              </CardActions>
             </Card>
-          </Col>
+          </Grid>
         ))}
-      </Row>
+      </Grid>
     </Container>
   );
 };

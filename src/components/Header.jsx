@@ -1,24 +1,33 @@
-
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import React from 'react';
+import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
-      <Container>
-        <Navbar.Brand as={Link} to="/">Roosevelt Alejandro</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto">
-            <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to="/about">About</Nav.Link>
-            <Nav.Link as={Link} to="/projects">Projects</Nav.Link>
-            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
-            <Nav.Link as={Link} to="/courses">Courses</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <AppBar position="static" sx={{ backgroundColor: 'black' }}>
+      <Toolbar>
+        <Typography variant="h6" component={Link} to="/" sx={{ flexGrow: 1, textDecoration: 'none', color: 'white' }}>
+          Roosevelt Alejandro
+        </Typography>
+        <Box sx={{ display: 'flex' }}>
+          <Button component={Link} to="/" sx={{ color: 'white' }}>
+            Home
+          </Button>
+          <Button component={Link} to="/about" sx={{ color: 'white' }}>
+            About
+          </Button>
+          <Button component={Link} to="/projects" sx={{ color: 'white' }}>
+            Projects
+          </Button>
+          <Button component={Link} to="/contact" sx={{ color: 'white' }}>
+            Contact
+          </Button>
+          <Button component={Link} to="/courses" sx={{ color: 'white' }}>
+            Courses
+          </Button>
+        </Box>
+      </Toolbar>
+    </AppBar>
   );
 };
 
