@@ -4,17 +4,12 @@ This is a personal portfolio website created using React and Bootstrap. The webs
 
 ## Table of Contents
 
-- [Demo](#demo)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Setup](#setup)
 - [Usage](#usage)
-- [Deployment](#deployment)
 - [Contact](#contact)
 
-## Demo
-
-You can view the live site here: [Your Portfolio Link](#)
 
 ## Features
 
@@ -62,5 +57,7 @@ npm run dev
 ```
 
 The website will be available at http://localhost:5173.
+
+## Contact
 
 Feel free to reach out to me through the Contact Page of this portfolio or directly via email at rooseveltalej@icloud.com.
