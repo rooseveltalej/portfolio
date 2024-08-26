@@ -24,8 +24,8 @@ This is a personal portfolio website created using React and Bootstrap. The webs
 
 - **React**: JavaScript library for building user interfaces.
 - **React Router**: For managing navigation between pages.
-- **Bootstrap**: For responsive and mobile-first web design.
-- **React Icons**: For adding icons to the website.
+- **Material UI**: For modern and consistent UI components.
+- **Material UI Icons**: For adding icons to the website.
 
 ## Setup
 
