@@ -19,8 +19,6 @@ function App() {
         <Route path="/courses" element={<CoursesPage />} />
         <Route path="*" element={<h1>Not Found</h1>} />
       </Routes>
-      
-      
     </Router>
   );
 }

@@ -16,7 +16,6 @@ const projects = [
     description: 'Description of Project 3. It includes technologies like Java, Spring Boot, and MySQL.',
     link: 'https://github.com/your-username/project3',
   },
-  // Add more projects here
 ];
 
 const Projects = () => {
