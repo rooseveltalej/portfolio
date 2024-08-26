@@ -66,7 +66,7 @@ export const coursesBySemester = [
     semester: "Seventh Semester",
     courses: [
       { name: "Artificial Intelligence", status: "pending" },
-      { name: "Networks", status: "pending" },
+      { name: "Computer networks", status: "pending" },
       { name: "Elective 2", status: "pending" },
       { name: "Software Engineering Project", status: "pending" },
       { name: "Entrepreneurship Development", status: "pending" },
