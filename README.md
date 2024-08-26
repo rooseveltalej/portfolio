@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-This is a personal portfolio website created using React and Bootstrap. The website showcases my skills, projects, education, and experience as a software developer and computer engineering student.
+This is a personal portfolio website created using React and Material UI. The website showcases my skills, projects, education, and experience as a software developer and computer engineering student.
 
 ## Table of Contents
 
